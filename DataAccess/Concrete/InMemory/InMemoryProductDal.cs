@@ -8,7 +8,7 @@ using System.Text;
 
     namespace DataAccess.Concrete.InMemory
 { 
-    public class InMemoryProductDal : IProductDal
+    public class InMemoryProductDal : ICategoryDal
     {
     List<Product> _products;
 
@@ -29,7 +29,12 @@ using System.Text;
         _products.Add(product);
     }
 
-    public void Delete(Product product)
+        public void Add(Category entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Product product)
     {
         //LLINQ - Language Integrated Query
 
@@ -48,7 +53,17 @@ using System.Text;
         _products.Remove(productToDelete);
     }
 
+        public void Delete(Category entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public Product Get(Expression<Func<Product, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Category Get(Expression<Func<Category, bool>> filter)
         {
             throw new NotImplementedException();
         }
@@ -59,6 +74,11 @@ using System.Text;
     }
 
         public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Category> GetAll(Expression<Func<Category, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
@@ -79,5 +99,10 @@ using System.Text;
 
         
     }
+
+        public void Update(Category entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

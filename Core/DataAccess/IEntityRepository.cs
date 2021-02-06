@@ -1,10 +1,10 @@
-﻿using Entities.Abstratct;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {//Generic Constraint where<T>
     //class: referans tip
     //IEntity olabilir veya onu implemente eden bir nesne olabilir.
